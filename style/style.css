@@ -36,7 +36,7 @@ h3 {
     display: flex;
     flex-direction: column;
     background-color: rgb(182, 180, 179);
-    align-items: center;
+    align-items: start;
     padding: 15px;
 }
 
@@ -45,6 +45,7 @@ h3 {
     font-style: normal;
     text-decoration: none;
     padding: 0;
+    margin: 0;
 }
 
 .box_title {
@@ -59,7 +60,7 @@ h3 {
 }
 
 .box_inp {
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -99,14 +100,38 @@ h3 {
     cursor: pointer;
     font-size: 18px;
     padding: 12px 10px 12px 50px;
+    position: relative;
 }
 
 .ul_to_do li::before {
     content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    top: 12px;
+    left: 12px;
 }
 
 .ul_to_do li::after {
     content: '';
 }
 
-.ul_to_do li.selected {}
+.ul_to_do li.selected {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.ul_to_do li.selected::before {
+    background-color: rgb(51, 247, 153);
+    border-color: rgb(51, 247, 153);
+}
+
+.ul_to_do li.selected::after {
+    content: '\2714';
+    position: absolute;
+    top: 11px;
+    left: 16px;
+    color: #f1f1f1;
+}
