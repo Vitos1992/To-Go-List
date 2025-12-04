@@ -130,8 +130,28 @@ h3 {
 
 .ul_to_do li.selected::after {
     content: '\2714';
+    /*сімвол "✓"*/
     position: absolute;
     top: 11px;
     left: 16px;
     color: #f1f1f1;
+}
+
+.ul_to_do li span {
+    position: absolute;
+    left: 450px;
+    top: 8px;
+    color: #555;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.ul_to_do li span:hover {
+    background-color: #f1f1f1;
 }

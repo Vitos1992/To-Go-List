@@ -14,9 +14,30 @@ function addTask() {
     li.innerHTML = input.value;
     inToDo.appendChild(li);
 
-    let sapn = document.createElement("span");
-    sapn.innerHTML = "\u00D7";
-    li.appendChild(sapn);
+    let span = document.createElement("span");
+    span.innerHTML = "\u00D7"; //символ "×"
+    li.appendChild(span);
   }
   input.value = "";
+  sameDate();
 }
+
+inToDo.addEventListener("click", function (e) {
+  if (e.target.tagName === "LI") {
+    e.target.classList.toggle("selected");
+    sameDate();
+  } else if (e.target.tagName === "SPAN") {
+    e.target.parentElement.remove();
+    sameDate();
+  }
+});
+
+function sameDate() {
+  localStorage.setItem("date", inToDo.innerHTML);
+}
+
+function showDate() {
+  inToDo.innerHTML = localStorage.getItem("date");
+}
+
+showDate();
