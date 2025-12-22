@@ -108,6 +108,7 @@ h3 {
     font-size: 18px;
     padding: 12px 10px 12px 50px;
     position: relative;
+    color: #f1f1f1;
 }
 
 .ul_to_do li::before {
@@ -123,6 +124,7 @@ h3 {
 
 .ul_to_do li::after {
     content: '';
+
 }
 
 .ul_to_do li.selected {
@@ -153,7 +155,7 @@ h3 {
     position: absolute;
     left: 450px;
     top: 8px;
-    color: #111;
+    color: #f1f1f1;
     cursor: pointer;
     width: 30px;
     height: 30px;
@@ -165,5 +167,6 @@ h3 {
 }
 
 .ul_to_do li span:hover {
+    color: #111;
     background-color: rgb(51, 247, 153);
 }
