@@ -11,6 +11,7 @@ body {
     background-image: url(../images/002.jpg);
     background-color: #2a0404;
     margin: 0 auto;
+    background-size: cover;
 }
 
 p,
@@ -36,7 +37,7 @@ h3 {
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    background-color: rgb(182, 180, 179);
+    background-color: rgb(182, 180, 179, 0.8);
     align-items: start;
     padding: 15px;
 }
@@ -138,6 +139,11 @@ h3 {
     color: #f1f1f1;
 }
 
+.ul_to_do li:hover {
+    color: rgb(51, 247, 153);
+}
+
+
 .ul_to_do li span {
     position: absolute;
     left: 450px;
@@ -154,5 +160,5 @@ h3 {
 }
 
 .ul_to_do li span:hover {
-    background-color: #f1f1f1;
+    background-color: rgb(51, 247, 153);
 }
